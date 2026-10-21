@@ -4,7 +4,7 @@ This repository packages Spotify Portal workflows for Claude Code, Codex, Cursor
 
 ## Repository structure
 
-- `skills/` contains the canonical Portal workflow instructions.
+- `skills/` contains the canonical Portal workflow instructions. Fleetshift workflows live there as `fleetshift-<workflow>` because hosts only discover skills one level deep (`skills/<name>/SKILL.md`), so they can't be grouped in a subfolder.
 - `plugins/shunt/` contains the shunt plugin (Claude Code only for now): scripts, skills, hooks, and evals for routing I/O-heavy work to AiKA modes.
 - `.claude-plugin/`, `.codex-plugin/`, and `.cursor-plugin/` contain host manifests; pi reads its manifest from the `pi` key in the root `package.json`.
 - `assets/` contains shared Portal branding and product imagery.

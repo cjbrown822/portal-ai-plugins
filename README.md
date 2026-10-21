@@ -14,6 +14,7 @@ diagnostics, and invoke Portal actions.
 - Search the software catalog and technical documentation using natural language queries.
 - Generate concise service briefings with available ownership, health, incident, and documentation details.
 - Discover and safely invoke Portal actions with built-in help, dry-run, and confirmation safeguards.
+- Create, run, check, and troubleshoot Fleetshift shifts, open PRs from completed runs, and stop a run on request.
 
 The marketplace also ships **shunt** (Claude Code only for now): a plugin that routes I/O-heavy agent work — bulk file reads and boilerplate generation — to AiKA modes running cheaper worker models, via the Portal CLI actions registry. See [`plugins/shunt/README.md`](plugins/shunt/README.md).
 
@@ -74,6 +75,11 @@ Start a new session and run:
 | `service` | Produce a concise operational service briefing |
 | `actions` | Discover, inspect, preview, and safely invoke Portal actions |
 | `feedback` | Submit feedback about the Portal CLI to the Portal team |
+| `fleetshift-create-shift` | Draft and create a Fleetshift shift from a goal, with a dry-run preview |
+| `fleetshift-run-shift` | Trigger a shift, monitor it with a bounded wait, and stop it on request |
+| `fleetshift-check-shift` | Report a shift's progress, targets, and PRs (read-only) |
+| `fleetshift-troubleshoot-shift` | Diagnose failed shift jobs from their status and logs (read-only) |
+| `fleetshift-create-prs` | Open PRs for completed shift targets after confirmation |
 
 ## Portal CLI
 
